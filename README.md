@@ -43,69 +43,16 @@ where if we change the page to 2 it returns the following data:
 since with the data we can perform the pagination with bootstrap:
 
 example made in express-handlebars.
+![Image text](https://github.com/chespi6677/Pagination-express/blob/main/pagination_one.png)
 
-<div class="container-grid-pagination py-5">
-  <div class="centrar-grid">
-    <nav aria-label="Page navigation example">
-      <ul class="pagination">
-        {{#if previousPage}}
-        <li class="page-item">
-          <a href="/page/{{previousPage}}" class="page-link color-btn">
-            <i class="fas fa-angle-left"></i>
-          </a>
-        </li>
-        {{/if}}
-        {{#if pageActive}}
-        <li class="page-item active">
-          <a class="page-link" href="/page/{{pageActive}}">{{pageActive}}</a>
-        </li>
-        {{/if}}
-        {{#each pages}}
-        <li class="page-item">
-          <a class="page-link" href="/page/{{items}}">{{items}}</a>
-        </li>
-        {{/each}}
-        {{#if nextPage}}
-          <li class="page-item">
-            <a href="/page/{{nextPage}}" class="page-link color-btn">
-            <i class="fas fa-chevron-right"></i></a>
-          </li>
-        </form>
-        {{/if}}
-      </ul>
-    </nav>
-  </div>
-</div>
+![Image text](https://github.com/chespi6677/Pagination-express/blob/main/pagination_two.png)
+
 
 image one example:
-
+![Image text](https://github.com/chespi6677/Pagination-express/blob/main/example_one.png)
 image two example:
+![Image text](https://github.com/chespi6677/Pagination-express/blob/main/example_two.png)
 
 to display the products from the database in the following path:
 
-app.get('/page/:page', async (req, res) => { 
-  const optedPage=parseInt(req.params.page);
-  const total = await pool.query('SELECT count(name) as "total" FROM product');
-  const limit = result._limit;
-  const page = result.actualPage;
-  const offset = (page - 1) * limit;  
-  await pool.query(
-    "select * from product ORDER BY id DESC limit " + limit + " OFFSET " + offset,
-    function (err, results) {
-      if (err) throw err;
-      let resulProducts = {
-        productPerPage: results.length,
-        pageNumber: page,
-        product: results,
-      };
-      res.render("index", {
-        resulProducts,
-        previousPage:result.previousPage,
-        pageActive:result.pageActive,
-        pages:result.pages,
-        nextPage:result.nextPage,
-        lastPage:result.lastPage
-      });
-    }
-  );
-});
+![Image text](https://github.com/chespi6677/Pagination-express/blob/main/ruta.png)
