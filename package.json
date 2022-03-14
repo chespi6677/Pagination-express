@@ -1,7 +1,7 @@
 {
-  "name": "pagination",
-  "version": "1.0.0",
-  "description": "",
+  "name": "express-pagination-rbh",
+  "version": "1.0.001",
+  "description": "crear paginacion en express",
   "main": "pagination.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,5 +9,7 @@
   "keywords": [],
   "author": "Ricardo Baltazar Hernandez",
   "email": "programacion.balta1993@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+  }
 }
