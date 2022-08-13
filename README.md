@@ -14,7 +14,7 @@ const limitItems = 56;
 const TotalProducts= 11328;
 const page= 1;
 
-const result = list.paginate(limitItems,TotalProducts,page);
+const result = list.pagination(limitItems,TotalProducts,page);
 
 as output it returns the following data:
 
