@@ -1,4 +1,4 @@
-install dependency for pagination
+#install dependency for pagination
 $npm i express-pagination-rbh
 
 In our project we import the pagination dependency as follows.
