@@ -8,9 +8,9 @@ In our project we import the pagination dependency as follows.
 const list = require('express-pagination-rbh');
 ```
 # in our view we send the following parameters as follows:
-## where it receives as limitItems the total number of products to display.
-## where TotalProducts is the total of products.
-## where page is the page number.
+### where it receives as limitItems the total number of products to display.
+### where TotalProducts is the total of products.
+### where page is the page number.
 ```bash
 const limitItems = 56;
 const TotalProducts= 11328;
@@ -32,7 +32,7 @@ const result = list.pagination(limitItems,TotalProducts,page);
 
 # since with the data we can perform the pagination with bootstrap:
 
-example made in express-handlebars.
+# example made in express-handlebars.
 ![Image text](https://github.com/chespi6677/Pagination-express/blob/main/pagination_one.png)
 
 
